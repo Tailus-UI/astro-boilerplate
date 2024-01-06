@@ -6,11 +6,31 @@ export default {
 		'./node_modules/@tailus/themer-**/dist/**/*.{js,ts}'
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors: ({ colors }) => ({
+				primary: colors.blue,
+				secondary: colors.purple,
+				accent : colors.pink,
+				success: colors.green,
+				danger: colors.red,
+				warning: colors.yellow,
+				info: colors.blue,
+				gray : colors.zinc,
+				white: colors.white,
+				black: colors.black,
+				transparent: colors.transparent,
+			}),
+		},
 	},
 	plugins: [
 		themer({
 			// ... your themer config
+			background: "lighter",
+			radius: "smooth",
+			shadow: {
+				size: "md",
+				opacity:5
+			}
 		})
 	],
 }

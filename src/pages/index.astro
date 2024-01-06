@@ -1,10 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Form from '../components/Form.astro';
+import TailusLogo from '../components/TailusLogo.astro';
+import AstroLogo from '../components/AstroLogo.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-
+<Layout title="Astro boilerplate - Tailus">
+	<main class="py-16">
+		<div class="mb-12 max-w-sm mx-auto">
+			<h1 class="text-gray-950 dark:text-white text-4xl font-semibold">Tailus <br> <span class="text-gray-600 dark:text-gray-400">Astro Boilerplate</span> </h1>
+			<p class="mt-4 text-gray-700 dark:text-gray-300">Start your project with Tailus Themer installed</p>
+		</div>
+		<Form />
+		<div class="mt-6 max-w-sm mx-auto px-4">
+			<h2 class="text-gray-950 dark:text-white font-medium">Learn more</h2>
+			<div class="mt-4 flex gap-6">
+				<a href="https://beta.tailus.io" class="flex items-center text-gray-950 hover:shadow-md hover:shadow-gray-950/5 dark:text-white dark:border-gray-800 dark:hover:bg-gray-900 gap-2 px-3 py-2 border rounded-[--card-border-radius]">
+					<TailusLogo />
+					Tailus Themer
+				</a>
+				<a href="https://astro.build" class="flex items-center text-gray-950 hover:shadow-md hover:shadow-gray-950/5 dark:text-white dark:border-gray-800 dark:hover:bg-gray-900 gap-2 px-3 py-2 border rounded-[--card-border-radius]">
+					<AstroLogo />
+					Astro
+				</a>
+			</div>
+		</div>
 	</main>
+	
 </Layout>

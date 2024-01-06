@@ -1,0 +1,37 @@
+---
+import { outlinedForm as formTheme } from "@tailus/themer-form";
+import { button as buttonTheme} from "@tailus/themer-button";
+import { mixedVariant as cardTheme } from "@tailus/themer-card";
+
+const isFormValid = true;
+---
+
+<form action="" class={cardTheme + " max-w-xl mx-auto"}>
+    <div class="py-4 max-w-sm mx-auto">
+        <div>
+            <h2 class="text-2xl font-semibold mb-2 text-gray-950 dark:text-white">Contact us</h2>
+            <p class="text-gray-700 dark:text-gray-300">Don't be shy, say 'hello !'</p>
+        </div>
+        <div class="space-y-4 my-8">
+            <div class={formTheme.field}>
+                <label for="email" class={formTheme.label.md}>Your email <span class="text-warning-600">*</span></label>
+                <input type="email" id="email" name="email" required class={formTheme.input.lg} />
+                {
+                    !isFormValid && <span class={formTheme.message.danger}>Enter your email please !</span>
+                }
+            </div>
+            <div class={formTheme.field}>
+                <label for="message" class={formTheme.label.md}>Your message <span class="text-warning-600">*</span></label>
+                <textarea id="message" required class={formTheme.textarea.lg}></textarea>
+                {
+                    !isFormValid && <span class={formTheme.message.danger}>Write a message please !</span>
+                }
+            </div>
+        </div>
+        <button class={buttonTheme.neutral?.lg + " w-full"}>
+            <span>Submit</span>
+        </button>
+    </div>
+</form>
+
+
