@@ -1,4 +1,5 @@
-# Astro Starter Kit: Basics
+# Tailus Astro boilerlate
+A starter template for [Tailus-Themer](https://beta.tailus.io/) and [Astro](https://astro.build) with Tailwind CSS.
 
 ```sh
 npm create astro@latest -- --template basics
